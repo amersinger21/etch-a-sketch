@@ -1,2 +1,3 @@
-# etch-a-sketch
-Odin Project Etch-a-Sketch
+Odin Project's Etch-a-Sketch
+
+
