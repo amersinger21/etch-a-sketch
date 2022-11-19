@@ -9,15 +9,25 @@
 		<script src="./main.js" defer></script>
 	</head>
 	<body>
-		<nav class="sidebar">
-			<div class="width-select-wrapper">
-				<input id="width-selector" type="range" min="1" max="32" value="16" />
-				<p id="width-output"></p>
+		<div class="main-wrapper">
+			<nav class="sidebar">
+				<div class="width-select-wrapper">
+					<p id="width-output"></p>
+					<input id="width-selector" type="range" min="1" max="100" value="16" />
+				</div>
+				<div class="color-picker-wrapper">
+					<p>Pen Color</p>
+					<input class="color-picker" type="color" value="#222222" />
+				</div>
+				<div class="button-wrapper">
+					<button id="random" class="btn" data-active="false">Random</button>
+					<button id="normal" class="btn" data-active="true">Normal</button>
+					<button id="clear" class="btn">Clear</button>
+				</div>
+			</nav>
+			<div class="sketch-area">
+				<div class="grid-wrapper"></div>
 			</div>
-			<div id="pen-color"></div>
-		</nav>
-		<div class="sketch-area">
-			<div class="grid-wrapper"></div>
 		</div>
 	</body>
 </html>
