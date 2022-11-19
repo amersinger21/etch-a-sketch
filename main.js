@@ -24,7 +24,17 @@ function MakeGrid(width) {
 	const gridBoxes = document.querySelectorAll(".grid-box");
 
 	gridBoxes.forEach((item) => {
-		item.addEventListener("mouseover", () => {
+		item.addEventListener("mouseenter", () => {
+			const randCheck = randButton.getAttribute("data-active");
+			const normCheck = normButton.getAttribute("data-active");
+
+			if (randCheck == "true") {
+				SetPenRandColor(item);
+			} else if (normCheck == "true") {
+				SetPenColor(item);
+			}
+		});
+		item.addEventListener("touchstart", () => {
 			const randCheck = randButton.getAttribute("data-active");
 			const normCheck = normButton.getAttribute("data-active");
 
